@@ -182,7 +182,7 @@ msgstr "\"%s\" hiện là theme mặc định theo hệ thống"
 
 #, python-format
 msgid "% calculation"
-msgstr "% tính toán"
+msgstr "% calculation"
 
 #, python-format
 msgid "% of parent"
@@ -959,7 +959,7 @@ msgid "Add CSS template"
 msgstr "Thêm mẫu CSS"
 
 msgid "Add Dashboard"
-msgstr "Thêm bảng điều khiển"
+msgstr "Thêm Dashboard"
 
 msgid "Add Group"
 msgstr "Thêm Nhóm"
@@ -1126,13 +1126,13 @@ msgid "Add the name of the chart"
 msgstr "Thêm tên của biểu đồ"
 
 msgid "Add the name of the dashboard"
-msgstr "Thêm tên của bảng điều khiển"
+msgstr "Thêm tên của dashboard"
 
 msgid "Add theme"
 msgstr "Thêm chủ đề"
 
 msgid "Add to dashboard"
-msgstr "Thêm vào bảng điều khiển"
+msgstr "Thêm vào dashboard"
 
 msgid "Add to tabs"
 msgstr "Thêm vào các tab"
@@ -1221,7 +1221,7 @@ msgid "Affected Charts"
 msgstr "các biểu đồ bị ảnh hưởng"
 
 msgid "Affected Dashboards"
-msgstr "các bảng điều khiển bị ảnh hưởng"
+msgstr "các dashboard bị ảnh hưởng"
 
 msgid "After"
 msgstr "Sau"
@@ -1823,17 +1823,17 @@ msgid ""
 "dashboard's individual charts"
 msgstr ""
 "Bất kỳ bảng màu nào được chọn ở đây sẽ ghi đè các màu đã áp dụng cho các "
-"biểu đồ riêng lẻ của bảng điều khiển này"
+"biểu đồ riêng lẻ của dashboard này"
 
 msgid ""
 "Any dashboards using these themes will be automatically dissociated from "
 "them."
 msgstr ""
-"Bất kỳ các bảng điều khiển nào sử dụng các chủ đề này sẽ tự động bị tách rời"
+"Bất kỳ dashboards nào sử dụng các chủ đề này sẽ tự động bị tách rời"
 " khỏi chúng."
 
 msgid "Any dashboards using this theme will be automatically dissociated from it."
-msgstr "Bất kỳ các bảng điều khiển nào sử dụng chủ đề này sẽ tự động bị tách khỏi nó."
+msgstr "Bất kỳ dashboards nào sử dụng chủ đề này sẽ tự động bị tách khỏi nó."
 
 msgid "Any databases that allow connections via SQL Alchemy URIs can be added. "
 msgstr ""
@@ -1886,7 +1886,7 @@ msgid "Apply Filter"
 msgstr "Áp dụng bộ lọc"
 
 msgid "Apply another dashboard filter"
-msgstr "Áp dụng bảng điều khiển khác bộ lọc"
+msgstr "Áp dụng các bộ lọc khác của dashboard"
 
 msgid "Apply conditional color formatting to metric"
 msgstr "Áp dụng định dạng màu có điều kiện cho chỉ số"
@@ -1901,7 +1901,7 @@ msgid ""
 "Apply custom CSS to the dashboard. Use class names or element selectors to "
 "target specific components."
 msgstr ""
-"Áp dụng CSS tùy chỉnh cho bảng điều khiển. Sử dụng tên lớp hoặc bộ chọn phần"
+"Áp dụng CSS tùy chỉnh cho dashboard. Sử dụng tên lớp hoặc bộ chọn phần"
 " tử để nhắm mục tiêu các thành phần cụ thể."
 
 msgid "Apply filters"
@@ -1940,7 +1940,7 @@ msgid "Are you sure you want to delete the selected charts?"
 msgstr "Bạn có chắc chắn muốn xóa các biểu đồ đã chọn không?"
 
 msgid "Are you sure you want to delete the selected dashboards?"
-msgstr "Bạn có chắc chắn muốn xóa các bảng điều khiển đã chọn không?"
+msgstr "Bạn có chắc chắn muốn xóa các dashboard đã chọn không?"
 
 msgid "Are you sure you want to delete the selected datasets?"
 msgstr "Bạn có chắc chắn muốn xóa các tập dữ liệu đã chọn không?"
@@ -2713,7 +2713,7 @@ msgid "Changes the sort value of the items in the legend only"
 msgstr "Chỉ thay đổi giá trị sắp xếp của các mục trong chú giải"
 
 msgid "Changing one or more of these dashboards is forbidden"
-msgstr "Việc thay đổi một hoặc nhiều các bảng điều khiển này là bị cấm"
+msgstr "Việc thay đổi một hoặc nhiều dashboards này là bị cấm"
 
 msgid ""
 "Changing the dataset may break the chart if the chart relies on columns or "
@@ -2730,7 +2730,7 @@ msgstr ""
 "liệu này, bao gồm cả các biểu đồ thuộc sở hữu của người khác."
 
 msgid "Changing this Dashboard is forbidden"
-msgstr "Việc thay đổi bảng điều khiển này là bị cấm"
+msgstr "Việc thay đổi dashboard này là bị cấm"
 
 msgid "Changing this chart is forbidden"
 msgstr "Việc thay đổi biểu đồ này bị cấm"
@@ -2800,7 +2800,7 @@ msgstr "biểu đồ [%s] đã được lưu"
 
 #, python-format
 msgid "Chart [%s] was added to dashboard [%s]"
-msgstr "biểu đồ [%s] đã được thêm vào bảng điều khiển [%s]"
+msgstr "biểu đồ [%s] đã được thêm vào dashboard [%s]"
 
 msgid "Chart cache timeout"
 msgstr "Hết thời gian lưu trữ cache biểu đồ"
@@ -2894,13 +2894,13 @@ msgstr ""
 "đoạn để chia tỷ lệ không"
 
 msgid "Check out this chart in dashboard:"
-msgstr "Xem xét biểu đồ này trong bảng điều khiển:"
+msgstr "Xem xét biểu đồ này trong dashboard:"
 
 msgid "Check out this chart: "
-msgstr "Xem cái biểu đồ này: "
+msgstr "Xem biểu đồ này: "
 
 msgid "Check out this dashboard: "
-msgstr "Xem cái bảng điều khiển này: "
+msgstr "Xem dashboard này: "
 
 msgid "Check to force date partitions to have the same height"
 msgstr "Kiểm tra để buộc các phân vùng ngày có cùng chiều cao"
@@ -2918,7 +2918,7 @@ msgid "Choose a chart for displaying on the map"
 msgstr "Chọn một biểu đồ để hiển thị trên bản đồ"
 
 msgid "Choose a chart or dashboard not both"
-msgstr "Chọn một biểu đồ hoặc bảng điều khiển, không chọn cả hai"
+msgstr "Chọn một biểu đồ hoặc dashboard, không chọn cả hai"
 
 msgid "Choose a database..."
 msgstr "Chọn một cơ sở dữ liệu..."
@@ -2957,7 +2957,7 @@ msgid ""
 "Choose from existing dashboard filters and select a value to refine your "
 "report results."
 msgstr ""
-"Chọn từ bảng điều khiển các bộ lọc hiện có và chọn một giá trị để tinh chỉnh"
+"Chọn từ bộ lọc của dashboard hiện có và chọn một giá trị để tinh chỉnh"
 " kết quả báo cáo của bạn."
 
 msgid "Choose how many X-Axis labels to show"
@@ -2981,7 +2981,7 @@ msgid "Choose numbers between %(min)s and %(max)s"
 msgstr "Chọn các số giữa %(min)s và %(max)s"
 
 msgid "Choose one of the available databases from the panel on the left."
-msgstr "Chọn một trong các các cơ sở dữ liệu có sẵn từ bảng điều khiển bên trái."
+msgstr "Chọn một trong các CSDL sẵn có từ pannel bên trái."
 
 msgid "Choose one of the available databases on the left panel."
 msgstr ""
@@ -4008,13 +4008,13 @@ msgid "Dark mode"
 msgstr "Chế độ tối"
 
 msgid "Dashboard"
-msgstr "bảng điều khiển"
+msgstr "Dashboard"
 
 msgid "Dashboard Filter"
-msgstr "bảng điều khiển bộ lọc"
+msgstr "Bộ lọc Dashboard"
 
 msgid "Dashboard Id"
-msgstr "bảng điều khiển Id"
+msgstr "Dashboard Id"
 
 #, python-format
 msgid "Dashboard [%s] just got created and chart [%s] was added to it"
@@ -7644,7 +7644,7 @@ msgid "List Unique Values"
 msgstr "Liệt kê các giá trị duy nhất"
 
 msgid "List Users"
-msgstr "Liệt kê người dùng"
+msgstr "Liệt kê Người dùng"
 
 msgid "List of extra columns made available in JavaScript functions"
 msgstr "Danh sách các cột bổ sung được cung cấp trong các hàm JavaScript"
@@ -7867,7 +7867,7 @@ msgid "Markup type"
 msgstr "Loại đánh dấu"
 
 msgid "Match system"
-msgstr "Hệ thống trận đấu"
+msgstr "Theo theme của HT"
 
 msgid "Match time shift color with original series"
 msgstr "Đổi màu thời gian trận đấu với loạt gốc"
@@ -15583,16 +15583,16 @@ msgid "Years %s"
 msgstr "Năm %s"
 
 msgid "Yes"
-msgstr "Vâng"
+msgstr "Có"
 
 msgid "Yes, Cancel"
-msgstr "Vâng, Hủy"
+msgstr "Có, Hủy"
 
 msgid "Yes, cancel"
-msgstr "Vâng, hủy"
+msgstr "Có, hủy"
 
 msgid "Yes, overwrite changes"
-msgstr "Vâng, ghi đè các thay đổi"
+msgstr "Có, ghi đè các thay đổi"
 
 #, python-format
 msgid "You are adding tags to %s %ss"
