@@ -44,7 +44,20 @@ import TabsRenderer from '../TabsRenderer';
 import type { LayoutItem, RootState } from 'src/dashboard/types';
 import type { DropResult } from 'src/dashboard/components/dnd/dragDroppableConfig';
 
-interface TabsProps {
+type TabSyncListener = (tabName: string, originTabsId: string) => void;
+
+const tabSyncListeners = new Set<TabSyncListener>();
+
+const publishTabSync = (tabName: string, originTabsId: string) => {
+  tabSyncListeners.forEach(listener => {
+    listener(tabName, originTabsId);
+  });
+};
+
+const normalizeTabName = (name?: string): string =>
+  (name ?? '').trim().toUpperCase();
+
+export interface TabsProps {
   id: string;
   parentId: string;
   component: LayoutItem;
@@ -127,6 +140,9 @@ const Tabs = (props: TabsProps): ReactElement => {
   const directPathToChild = useSelector(
     (state: RootState) => state.dashboardState.directPathToChild,
   );
+  const dashboardLayout = useSelector(
+    (state: RootState) => state.dashboardLayout.present,
+  );
   const nativeFiltersBarOpen = useSelector(
     (state: RootState) => state.dashboardState.nativeFiltersBarOpen ?? false,
   );
@@ -167,6 +183,41 @@ const Tabs = (props: TabsProps): ReactElement => {
   const prevDirectPathToChild = usePrevious(directPathToChild);
   const prevTabIds = usePrevious(props.component.children);
 
+  useEffect(() => {
+    const listener: TabSyncListener = (tabName, originTabsId) => {
+      // Không đồng bộ ngược lại nhóm Tabs nguồn
+      if (originTabsId === props.component.id) {
+        return;
+      }
+
+      const children = props.component.children;
+
+      // Tìm tab có tên trùng với tab được chọn ở nhóm nguồn
+      const targetIndex = children.findIndex(
+        tabId =>
+          normalizeTabName(dashboardLayout[tabId]?.meta?.text) === tabName,
+      );
+
+      // Không có tab trùng tên thì giữ nguyên
+      if (targetIndex === -1 || targetIndex === selectedTabIndex) {
+        return;
+      }
+
+      setSelectedTabIndex(targetIndex);
+      setActiveKey(children[targetIndex]);
+    };
+
+    tabSyncListeners.add(listener);
+
+    return () => {
+      tabSyncListeners.delete(listener);
+    };
+  }, [
+    props.component.id,
+    props.component.children,
+    dashboardLayout,
+    selectedTabIndex,
+  ]);
   useEffect(() => {
     if (prevActiveKey) {
       props.setActiveTab(activeKey, prevActiveKey);
@@ -243,9 +294,19 @@ const Tabs = (props: TabsProps): ReactElement => {
         props.onChangeTab({ pathToTabIndex });
         setSelectedTabIndex(tabIndex);
       }
-      // Always set activeKey to ensure it's synchronized
-      if (tabIds[tabIndex]) {
-        setActiveKey(tabIds[tabIndex]);
+
+      const selectedTabId = tabIds[tabIndex];
+
+      if (selectedTabId) {
+        setActiveKey(selectedTabId);
+
+        const selectedTabName = normalizeTabName(
+          dashboardLayout[selectedTabId]?.meta?.text,
+        );
+
+        if (selectedTabName) {
+          publishTabSync(selectedTabName, props.component.id);
+        }
       }
     },
     [
@@ -254,6 +315,7 @@ const Tabs = (props: TabsProps): ReactElement => {
       props.onChangeTab,
       selectedTabIndex,
       setActiveKey,
+      dashboardLayout,
     ],
   );
 
